@@ -1,11 +1,23 @@
 from datetime import datetime, timezone
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware 
 
-from app.config import settings
 from app.schema import Profile
 from app.catfact import cat_fact
 
 app = FastAPI()
+URL = "https://catfact.ninja/fact"
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 
 my_info = {
@@ -22,5 +34,5 @@ my_info = {
 @app.get("/me", response_model=Profile)
 async def get_my_info():
     "Retreive Basic information"
-    my_info['fact'] = cat_fact(settings.URL)
+    my_info['fact'] = cat_fact(URL)
     return my_info
