@@ -2,7 +2,7 @@
 
 ## 🚀 Overview
 
-This project is my submission for Backend Wizards Stage 0, which involves building a simple RESTful API that returns profile information and a random cat fact fetched dynamically from the Cat Facts API.</br>
+This project is my submission for HNG Internshipi Stage 0, which involves building a simple RESTful API that returns profile information and a random cat fact fetched dynamically from the Cat Facts API.</br>
 The endpoint returns real-time data, demonstrating the use of:
 
 - RESTful API design
@@ -41,24 +41,14 @@ The endpoint returns real-time data, demonstrating the use of:
 ```bash
 ME_API/
 │
-├── main.py                       # Application entry point
-│
-├── requirements.txt               # Project dependencies
+├── main.py                        # Project Code
 │
 ├── app/
-│   ├── routes/
-│   │   └── profile.py             # /me endpoint route
-│   │
-│   ├── services/
-│   │   └── catfacts_service.py    # Cat Facts API logic
-│   │
-│   ├── core/
-│   │   ├── config.py              # Environment and settings
-│   │   ├── utils.py               # Timestamp & helper functions
-│   │   └── logger.py              # Logging setup
-│   │
-│   └── schemas/
-│       └── response_schema.py     # Pydantic model for response
+|   ├── schema.py                  # Pydantic model for response
+│   ├── config.py                  # Environment and settings
+|   └── catfact.py                 # Cat Facts API logic
+|
+├── requirements.txt               # Project dependencies
 │
 ├── .env                           # Environment variables
 ├── .gitignore                     # Ignored files
