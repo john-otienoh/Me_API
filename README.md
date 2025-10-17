@@ -146,3 +146,6 @@ Verify:
 - Content-Type → application/json
 - Timestamp updates dynamically
 - Cat fact changes each request
+
+[Live Link](https://meapi-production.up.railway.app/me)</br>
+[Blog Link](http://dev.to/john_otienoh/me-api-13mk)
