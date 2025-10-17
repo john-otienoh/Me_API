@@ -21,7 +21,7 @@ app.add_middleware(
 
 
 my_info = {
-    "status": "Success",
+    "status": "success",
     "user": {
         "email": "johnteclaire@gmail.com",
         "name": "John Charles Otienoh",
