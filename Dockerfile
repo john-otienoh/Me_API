@@ -28,4 +28,4 @@ COPY . .
 EXPOSE 8000
 
 # Start the app
-CMD ["hypercorn", "main:app", "--bind", "localhost:8000"]
+CMD ["hypercorn", "main:app", "--bind", "0.0.0.0:8000"]
